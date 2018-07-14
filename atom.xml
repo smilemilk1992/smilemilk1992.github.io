@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-14T00:17:35.311Z</updated>
+  <updated>2017-12-21T01:34:08.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,23 +17,88 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/07/14/hello-world/"/>
-    <id>http://yoursite.com/2018/07/14/hello-world/</id>
-    <published>2018-07-14T00:17:35.310Z</published>
-    <updated>2018-07-14T00:17:35.311Z</updated>
+    <title>ubuntu下安装PyV8</title>
+    <link href="http://yoursite.com/2017/12/20/pyv8/"/>
+    <id>http://yoursite.com/2017/12/20/pyv8/</id>
+    <published>2017-12-20T15:42:15.000Z</published>
+    <updated>2017-12-21T01:34:08.000Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>这几天需要使用PyV8来进行python与javascript的交互，在ubuntu上面安装遇到了不少的坑，折腾几小时终于找到方法。</p><h1 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install scons</span><br><span class="line">$ sudo apt-get install libboost-dev libboost-thread-dev</span><br><span class="line">$ sudo apt-get install libboost-system-dev libboost-python-dev</span><br></pre></td></tr></table></figure><h1 id="安装Pyv8"><a href="#安装Pyv8" class="headerlink" title="安装Pyv8"></a>安装Pyv8</h1><p>&ensp;&ensp;&ensp;&ensp;下载二进制文件<a href="https://github.com/emmetio/pyv8-binaries" target="_blank" rel="noopener">github</a>找到适合你机器的版本下载。解压出来应该有两个文件：<em>PyV8.py</em> ,<em> _PyV8.so</em>,然后把这两个文件拷贝到你的python第三方包的目录里面就好，比如我的是:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> pyv8</span><br><span class="line">$ sudo cp * /usr/lib/python2.7/dist-packages/</span><br></pre></td></tr></table></figure></p><p>&ensp;&ensp;&ensp;然后进入到python环境测试如下代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import PyV8</span><br><span class="line">ctxt = PyV8.JSContext()</span><br><span class="line">ctxt.enter()</span><br><span class="line">func = ctxt.eval(<span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">(function()&#123;</span></span><br><span class="line"><span class="string">    function hello()&#123;</span></span><br><span class="line"><span class="string">        return "</span>Hello world.<span class="string">";</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        return hello();</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">"</span><span class="string">""</span>)</span><br><span class="line"><span class="built_in">print</span> func()</span><br></pre></td></tr></table></figure></p><p>执行输出Hello World说明安装成功了，就可以模拟JS代码了。</p><hr><p>好记性不如烂笔头，记录点滴！</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;这几天需要使用PyV8来进行python与javascript的交互，在ubuntu上面安装遇到了不少的坑，折腾几小时终于找到方法。&lt;/p&gt;
+&lt;h1 id=&quot;安装依赖&quot;&gt;&lt;a href=&quot;#安装依赖&quot; class=&quot;headerlink&quot; title=&quot;安装依赖&quot;&gt;&lt;/a&gt;
       
     
     </summary>
     
+      <category term="python" scheme="http://yoursite.com/categories/python/"/>
+    
+    
+      <category term="pyv8" scheme="http://yoursite.com/tags/pyv8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo一个错误解决办法</title>
+    <link href="http://yoursite.com/2017/12/20/error/"/>
+    <id>http://yoursite.com/2017/12/20/error/</id>
+    <published>2017-12-20T15:02:20.000Z</published>
+    <updated>2017-12-20T15:39:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天进入到博客目录，发现hexo命令行用不了了，报如下错误：</p><blockquote><p>ERROR Local hexo not found in ~/Downloads/hexo/blog</p></blockquote><blockquote><p>ERROR Try running: ‘npm install hexo –save’</p></blockquote><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><blockquote><p>rm -rf node_modules</p></blockquote><blockquote><p>npm install</p></blockquote><p>ok,至此hexo命令已经可以运行，问题解决！</p><hr><p><strong>好记性不如烂笔头，记录点滴！</strong></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天进入到博客目录，发现hexo命令行用不了了，报如下错误：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ERROR Local hexo not found in ~/Downloads/hexo/blog&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="常见错误解决" scheme="http://yoursite.com/categories/%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>smilemilk的第一次博客之旅</title>
+    <link href="http://yoursite.com/2017/11/24/hello-world/"/>
+    <id>http://yoursite.com/2017/11/24/hello-world/</id>
+    <published>2017-11-24T07:24:48.000Z</published>
+    <updated>2017-12-02T13:45:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to here! 在这里我将会和大家在接下来的日子里面一起分享自己的<strong>爬虫</strong>+<strong>搜索</strong>+<strong>大数据</strong>方面的工程经验，</p><h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h2><p>学校：<strong>武汉科技大学</strong></p><p>研究方向：<strong>大数据</strong></p><p>公司：<strong>狐厂</strong></p><p>爱好：<strong>篮球、羽毛球</strong></p><p><strong>好记性不如烂笔头，接下来我的博客将会陆续更新，博客还在施工中，敬请期待！！</strong>        </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to here! 在这里我将会和大家在接下来的日子里面一起分享自己的&lt;strong&gt;爬虫&lt;/strong&gt;+&lt;strong&gt;搜索&lt;/strong&gt;+&lt;strong&gt;大数据&lt;/strong&gt;方面的工程经验，&lt;/p&gt;
+&lt;h2 id=&quot;About-me&quot;&gt;&lt;a h
+      
+    
+    </summary>
+    
+      <category term="about me" scheme="http://yoursite.com/categories/about-me/"/>
+    
+    
+      <category term="简介" scheme="http://yoursite.com/tags/%E7%AE%80%E4%BB%8B/"/>
+    
+      <category term="大学" scheme="http://yoursite.com/tags/%E5%A4%A7%E5%AD%A6/"/>
+    
+      <category term="爱好" scheme="http://yoursite.com/tags/%E7%88%B1%E5%A5%BD/"/>
     
   </entry>
   
