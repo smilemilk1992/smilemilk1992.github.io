@@ -128,7 +128,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 .outer {
-  max-width: 740px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -143,8 +143,8 @@ body {
 .inner {
   display: inline;
   float: left;
-  width: 97.22222222222221%;
-  margin: 0 1.388888888888889%;
+  width: 97.91666666666666%;
+  margin: 0 1.041666666666667%;
 }
 .left,
 .alignleft {
@@ -178,6 +178,14 @@ body {
 }
 .mobile-nav-on #wrap {
   left: 280px;
+}
+@media screen and (min-width: 768px) {
+  #main {
+    display: inline;
+    float: left;
+    width: 72.91666666666666%;
+    margin: 0 1.041666666666667%;
+  }
 }
 .article-date,
 .article-category-link,
