@@ -20,9 +20,8 @@
     <link rel="alternative" href="/atom.xml" title="smilemilk" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   
 </head>
@@ -30,7 +29,11 @@
   <div id="container">
     <div id="wrap">
       <header id="header">
+  <div id="overlay"></div>
   <div id="header-outer" class="outer">
+    <div id="profile_img">
+      <img id="circle_img" src="holder.js/150x150" />
+    </div>
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
         <a href="/" id="logo">smilemilk</a>
@@ -41,18 +44,20 @@
         </h2>
       
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="sub-nav">
+    <div id="header-menu">
+      <nav id="main-nav">
+        <ul>
         
-          <a id="nav-home-icon" class="nav-icon" href="/"></a>
+          <li><a href="/"><i class="fa fa-home icon-setting"></i></a></li>
         
-          <a id="nav-archives-icon" class="nav-icon" href="/archives"></a>
+          <li><a href="/archives"><i class="fa fa-archive icon-setting"></i></a></li>
         
-          <a id="nav-about-icon" class="nav-icon" href="/about"></a>
+          <li><a href="/about"><i class="fa fa-user icon-setting"></i></a></li>
         
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <li><a href="/atom.xml"><i class="fa fa-rss  icon-setting"></i></a></li>
         
+        </ul>
       </nav>
     </div>
   </div>
@@ -60,6 +65,13 @@
       <div class="outer">
         <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
+    <a href="/2018/07/14/hello-world/" class="article-date">
+  <time datetime="2018-07-14T00:17:35.310Z" itemprop="datePublished">2018-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
     
       <header class="article-header">
         
@@ -71,10 +83,6 @@
 
       </header>
     
-    <time class="article-date" datetime="2018-07-14T00:17:35.310Z" itemprop="datePublished">07-14-2018</time>
-    
-  </div>
-  <div class="article-inner">
     <div class="article-entry" itemprop="articleBody">
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -108,21 +116,23 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 Chen hao<br>
-      <a href="https://github.com/steven5538/hexo-theme-athena" target="_blank">Athena</a> by <a href="http://steven5538.tw" target="_blank">Steven5538</a> | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      <a href="https://github.com/ken8203/hexo-theme-alberta" target="_blank">Alberta</a> by <a href="http://jaychung.tw" target="_blank">jaychung</a>. Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Thank <a href="http://subtlepatterns.com/" target="_blank">Subtlepatterns</a>
     </div>
   </div>
 </footer>
     </div>
     
+    
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+<script src="//imsky.github.io/holder/holder.js"></script>
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
 <script src="/js/script.js"></script>
+
   </div>
 </body>
 </html>
