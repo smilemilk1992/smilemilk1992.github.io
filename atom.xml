@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-07-15T15:12:08.574Z</updated>
+  <updated>2017-12-21T01:34:08.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>ubuntu下安装Py</title>
-    <link href="http://yoursite.com/2017/12/20/pyv/"/>
-    <id>http://yoursite.com/2017/12/20/pyv/</id>
-    <published>2017-12-20T15:42:15.000Z</published>
-    <updated>2018-07-15T15:12:08.574Z</updated>
-    
-    <content type="html"><![CDATA[<p>这几天需要使用PyV8来进行python与javascript的交互，在ubuntu上面安装遇到了不少的坑，折腾几小时终于找到方法。</p><h1 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install scons</span><br><span class="line">$ sudo apt-get install libboost-dev libboost-thread-dev</span><br><span class="line">$ sudo apt-get install libboost-system-dev libboost-python-dev</span><br></pre></td></tr></table></figure><h1 id="安装Pyv8"><a href="#安装Pyv8" class="headerlink" title="安装Pyv8"></a>安装Pyv8</h1><p>&ensp;&ensp;&ensp;&ensp;下载二进制文件<a href="https://github.com/emmetio/pyv8-binaries" target="_blank" rel="noopener">github</a>找到适合你机器的版本下载。解压出来应该有两个文件：<em>PyV8.py</em> ,<em> _PyV8.so</em>,然后把这两个文件拷贝到你的python第三方包的目录里面就好，比如我的是:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> pyv8</span><br><span class="line">$ sudo cp * /usr/lib/python2.7/dist-packages/</span><br></pre></td></tr></table></figure></p><p>&ensp;&ensp;&ensp;然后进入到python环境测试如下代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import PyV8</span><br><span class="line">ctxt = PyV8.JSContext()</span><br><span class="line">ctxt.enter()</span><br><span class="line">func = ctxt.eval(<span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">(function()&#123;</span></span><br><span class="line"><span class="string">    function hello()&#123;</span></span><br><span class="line"><span class="string">        return "</span>Hello world.<span class="string">";</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        return hello();</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">"</span><span class="string">""</span>)</span><br><span class="line"><span class="built_in">print</span> func()</span><br></pre></td></tr></table></figure></p><p>执行输出Hello World说明安装成功了，就可以模拟JS代码了。</p><hr><p>好记性不如烂笔头，记录点滴！</p><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;这几天需要使用PyV8来进行python与javascript的交互，在ubuntu上面安装遇到了不少的坑，折腾几小时终于找到方法。&lt;/p&gt;
-&lt;h1 id=&quot;安装依赖&quot;&gt;&lt;a href=&quot;#安装依赖&quot; class=&quot;headerlink&quot; title=&quot;安装依赖&quot;&gt;&lt;/a&gt;
-      
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="pyv8" scheme="http://yoursite.com/tags/pyv8/"/>
-    
-  </entry>
   
   <entry>
     <title>ubuntu下安装PyV8</title>
