@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/11/15/simhash/</loc>
+    <lastmod>2019-01-08T06:58:01.648Z</lastmod>
+    <data>
+        <display>
+        <title>【深度好文】simhash文本去重流程</title>
+        <pubTime>2018-11-15T12:37:41.000Z</pubTime>
+        
+        <tag>文本去重</tag>
+         
+         
+           
+             
+              <breadCrumb title="simhash" url="http://yoursite.com/categories/simhash/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/11/18/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2018-11-20T07:48:58.713Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="markdown" url="http://yoursite.com/categories/markdown/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/11/15/simhash/</loc>
-    <lastmod>2018-11-20T07:48:13.118Z</lastmod>
-    <data>
-        <display>
-        <title>【深度好文】simhash文本去重流程</title>
-        <pubTime>2018-11-15T12:37:41.000Z</pubTime>
-        
-        <tag>文本去重</tag>
-         
-         
-           
-             
-              <breadCrumb title="simhash" url="http://yoursite.com/categories/simhash/"/>
           
         </display>
     </data>
