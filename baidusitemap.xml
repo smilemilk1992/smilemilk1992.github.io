@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/01/01/hello-world/</loc>
+    <lastmod>2019-01-09T08:10:39.767Z</lastmod>
+    <data>
+        <display>
+        <title>smilemilk的第一次博客之旅</title>
+        <pubTime>2019-01-01T01:42:15.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="about me" url="http://yoursite.com/categories/about-me/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/01/06/simhash/</loc>
     <lastmod>2019-01-09T08:06:55.184Z</lastmod>
     <data>
@@ -39,30 +57,6 @@
            
              
               <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/01/01/hello-world/</loc>
-    <lastmod>2019-01-08T10:23:33.757Z</lastmod>
-    <data>
-        <display>
-        <title>smilemilk的第一次博客之旅</title>
-        <pubTime>2019-01-01T01:42:15.000Z</pubTime>
-        
-        <tag>简介</tag>
-         
-        <tag>大学</tag>
-         
-        <tag>爱好</tag>
-         
-         
-           
-             
-              <breadCrumb title="about me" url="http://yoursite.com/categories/about-me/"/>
           
         </display>
     </data>
