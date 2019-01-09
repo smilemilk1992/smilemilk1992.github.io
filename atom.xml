@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-09T08:14:24.994Z</updated>
+  <updated>2019-01-09T08:17:54.809Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>java分布式锁</title>
+    <title>java分布式锁之redis篇</title>
     <link href="http://yoursite.com/2019/01/09/java%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
     <id>http://yoursite.com/2019/01/09/java分布式锁/</id>
     <published>2019-01-09T08:03:11.000Z</published>
-    <updated>2019-01-09T08:14:24.994Z</updated>
+    <updated>2019-01-09T08:17:54.809Z</updated>
     
-    <content type="html"><![CDATA[<p><strong> &ensp;&ensp;&ensp;&ensp;由于在平时的工作中，线上服务器是分布式多台部署的，经常会面临解决分布式场景下数据一致性的问题，那么就要利用分布式锁来解决这些问题。所以将自己的心得体会记录下来做一个讲解和总结。希望这篇文章可以方便自己以后查阅，同时要是能帮助到刚开始接触到这方面的人那也是很好的。 </strong></p><hr>]]></content>
+    <content type="html"><![CDATA[<p><strong> &ensp;&ensp;&ensp;&ensp;由于在平时的工作中，线上服务器是分布式多台部署的，经常会面临解决分布式场景下数据一致性的问题，那么就要利用分布式锁来解决这些问题。所以将自己的心得体会记录下来做一个讲解和总结。希望这篇文章可以方便自己以后查阅，同时要是能帮助到刚开始接触到这方面的同学那也是很好的。 </strong></p><hr>]]></content>
     
     <summary type="html">
     
@@ -38,6 +38,8 @@
     
     
       <category term="分布式锁" scheme="http://yoursite.com/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    
+      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
     
   </entry>
   
