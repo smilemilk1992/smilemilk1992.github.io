@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-10T08:54:16.629Z</updated>
+  <updated>2019-01-10T09:07:24.130Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2019/01/11/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-1/"/>
     <id>http://yoursite.com/2019/01/11/Java多线程编程-1/</id>
     <published>2019-01-11T08:52:36.000Z</published>
-    <updated>2019-01-10T08:54:16.629Z</updated>
+    <updated>2019-01-10T09:07:24.130Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1、进程与线程的概念"><a href="#1、进程与线程的概念" class="headerlink" title="1、进程与线程的概念"></a>1、进程与线程的概念</h1><p>（1）在传统的操作系统中，程序并不能独立运行，作为资源分配和独立运行的基本单位都是进程。<br>   在未配置 OS 的系统中，程序的执行方式是顺序执行，即必须在一个程序执行完后，才允许另一个程序执行；在多道程序环境下，则允许多个程序并发执行。程序的这两种执行方式间有着显著的不同。也正是程序并发执行时的这种特征，才导致了在操作系统中引入进程的概念。<br>   自从在 20 世纪 60 年代人们提出了进程的概念后，在 OS 中一直都是以进程作为能拥有资源和独立运行的基本单位的。直到 20 世纪 80 年代中期，人们又提出了比进程更小的能独立运行的基本单位——线程(Thread)，试图用它来提高系统内程序并发执行的程度，从而可进一步提高系统的吞吐量。特别是在进入 20 世纪 90 年代后，多处理机系统得到迅速发展，线程能比进程更好地提高程序的并行执行程度，充分地发挥多处理机的优越性，因而在近几年所推出的多处理机OS中也都引入了线程，以改善OS的性能。</p><p>   —–以上摘自《计算机操作系统-汤小丹等编著-3 版》</p><p>（2）进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位，是操作系统结构的基础。在早期面向进程设计的计算机结构中，进程是程序的基本执行实体；在当代面向线程设计的计算机结构中，进程是线程的容器。程序是指令、数据及其组织形式的描述，进程是程序的实体。</p><p>（3）线程，有时被称为轻量级进程(Lightweight Process，LWP），是程序执行流的最小单元。线程是程序中一个单一的顺序控制流程。进程内一个相对独立的、可调度的执行单元，是系统独立调度和分派CPU的基本单位指运行中的程序的调度单位。在单个程序中同时运行多个线程完成不同的工作，称为多线程。</p><p>进程与线程的关系如下图所示：</p><p><img src="/img/20190111/进程线程.png" alt="进程与线程关系"></p><h1 id="2、Java实现多线程的方式"><a href="#2、Java实现多线程的方式" class="headerlink" title="2、Java实现多线程的方式"></a>2、Java实现多线程的方式</h1><h2 id="2-1、继承Thread，重写run（）方法"><a href="#2-1、继承Thread，重写run（）方法" class="headerlink" title="2.1、继承Thread，重写run（）方法"></a>2.1、继承Thread，重写run（）方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">public class MyThread extends Thread&#123;</span><br><span class="line">    private int ticket;</span><br><span class="line">    public MyThread(int ticket)&#123;</span><br><span class="line">        this.ticket=ticket;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void <span class="function"><span class="title">getTicket</span></span>()&#123;</span><br><span class="line">        synchronized (MyThread.class) &#123; //防止出现线程安全的问题</span><br><span class="line">            <span class="keyword">while</span> (ticket&gt;0)&#123;</span><br><span class="line">                ticket--;</span><br><span class="line">                System.out.println(<span class="string">"剩余"</span>+ticket+<span class="string">"张票"</span>+<span class="string">" "</span>+currentThread().getName());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        //开50个线程进行抢票</span><br><span class="line">        <span class="keyword">for</span>(int i=0;i&lt;50;i++)&#123;</span><br><span class="line">            MyThread thread = new MyThread(100)&#123;</span><br><span class="line">                @Override</span><br><span class="line">                public void <span class="function"><span class="title">run</span></span>()&#123;</span><br><span class="line">                    getTicket();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            thread.start();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;1、进程与线程的概念&quot;&gt;&lt;a href=&quot;#1、进程与线程的概念&quot; class=&quot;headerlink&quot; title=&quot;1、进程与线程的概念&quot;&gt;&lt;/a&gt;1、进程与线程的概念&lt;/h1&gt;&lt;p&gt;（1）在传统的操作系统中，程序并不能独立运行，作为资源分配和独立运行的基本单
+      
     
     </summary>
     

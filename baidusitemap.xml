@@ -4,26 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/01/01/hello-world/</loc>
-    <lastmod>2019-01-10T08:56:06.019Z</lastmod>
-    <data>
-        <display>
-        <title>smilemilk的第一次博客之旅</title>
-        <pubTime>2019-01-01T01:42:15.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="about me" url="http://yoursite.com/categories/about-me/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2019/01/11/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-1/</loc>
-    <lastmod>2019-01-10T08:54:16.629Z</lastmod>
+    <lastmod>2019-01-10T09:07:24.130Z</lastmod>
     <data>
         <display>
         <title>Java多线程编程-(1)</title>
@@ -37,6 +19,24 @@
            
              
               <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/01/01/hello-world/</loc>
+    <lastmod>2019-01-10T08:56:06.019Z</lastmod>
+    <data>
+        <display>
+        <title>smilemilk的第一次博客之旅</title>
+        <pubTime>2019-01-01T01:42:15.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="about me" url="http://yoursite.com/categories/about-me/"/>
           
         </display>
     </data>
