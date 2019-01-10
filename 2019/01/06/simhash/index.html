@@ -70,7 +70,7 @@
 <h2 id="7-2-汉明距离"><a href="#7-2-汉明距离" class="headerlink" title="7.2 汉明距离"></a>7.2 汉明距离</h2><p>&ensp;&ensp;&ensp;&ensp;在信息理论中，Hamming Distance 表示两个等长字符串在对应位置上不同字符的数目，我们以d(x, y)表示字符串x和y之间的汉明距离。从另外一个方面看，汉明距离度量了通过替换字符的方式将字符串x变成y所需要的最小的替换次数。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">举例说明以下字符串间的汉明距离为：</span><br><span class="line">&quot;karolin&quot; and &quot;kathrin&quot; is 3.</span><br><span class="line">&quot;karolin&quot; and &quot;kerstin&quot; is 3.</span><br><span class="line">1011101 and 1001001 is 2.</span><br><span class="line">2173896 and 2233796 is 3.</span><br></pre></td></tr></table></figure>
 <h1 id="8、【实战】新闻文本去重服务详细流程"><a href="#8、【实战】新闻文本去重服务详细流程" class="headerlink" title="8、【实战】新闻文本去重服务详细流程"></a>8、【实战】新闻文本去重服务详细流程</h1><p>&ensp;&ensp;&ensp;&ensp;上面陆陆续续讲了这么多理论知识想必大家也是一头雾水，接下来我们通过实战来讲述整体流程。</p>
-<p><img src="/img/动图1.gif" alt="pic1"></p>
+<p><img src="/img/simhash/pic1.gif" alt="pic1"></p>
 <p>&ensp;&ensp;&ensp;&ensp;本文将文本排重做成了一个接口，首先给去重接口传一些必要的参数，针对新闻文本为例（url:链接 title:文本标题 content:内容）。依次是进行url排重、title排重、content排重，<br>如果三种都没有找到，则建立url、title、content索引存储到redis。具体流程图如下：</p>
 <p><img src="/img/simhash/SIMHASH.png" alt="simhash4"></p>
 <h2 id="8-1、URL排重"><a href="#8-1、URL排重" class="headerlink" title="8.1、URL排重"></a>8.1、URL排重</h2><ol>
