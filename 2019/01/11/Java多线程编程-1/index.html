@@ -42,7 +42,10 @@
 <li>Lock可以让等待锁的线程中断，而synchronized则不行，会一直等待下去，直到有唤醒的操作。</li>
 <li>Lock可以判断线程是否成功获取锁对象，而synchronized则不行。</li>
 </ul>
-<p>&ensp;&ensp;&ensp;&ensp;总结：ReentrantLock和synchronized相比，主要是ReentrantLock实现类定义了一些特殊的方法，从而决定了ReentrantLock在功能上比synchronized更丰富些。但缺点也是，比如上述第二点，可以反映出在一定程度上synchronized安全性和使用便捷性上好些。</p>
+<p>总结：</p>
+<blockquote>
+<p>ReentrantLock和synchronized相比，主要是ReentrantLock实现类定义了一些特殊的方法，从而决定了ReentrantLock在功能上比synchronized更丰富些。但缺点也是，比如上述第二点，可以反映出在一定程度上synchronized安全性和使用便捷性上好些。</p>
+</blockquote>
 <p><strong> ReentrantLock中的一些方法： </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">isFair()      //判断锁是否是公平锁</span><br><span class="line"> </span><br><span class="line">isLocked()    //判断锁是否被任何线程获取了</span><br><span class="line"> </span><br><span class="line">isHeldByCurrentThread()   //判断锁是否被当前线程获取了</span><br><span class="line"> </span><br><span class="line">hasQueuedThreads()   //判断是否有线程在等待该锁</span><br></pre></td></tr></table></figure></p>
 <p><strong> 性能比较 </strong></p>
 <p>&ensp;&ensp;&ensp;&ensp;在性能上来说，如果竞争资源不激烈，两者的性能是差不多的，而<strong> 当竞争资源非常激烈时（即有大量线程同时竞争），此时ReentrantLock的性能要远远优于synchronized </strong>。所以说，在具体使用时要根据适当情况选择。</p>
