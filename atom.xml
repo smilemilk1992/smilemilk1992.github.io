@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-16T08:10:31.741Z</updated>
+  <updated>2019-01-16T08:12:58.523Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/01/16/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-ReentrantReadWriteLock/"/>
     <id>http://yoursite.com/2019/01/16/Java多线程编程-ReentrantReadWriteLock/</id>
     <published>2019-01-16T08:04:50.000Z</published>
-    <updated>2019-01-16T08:10:31.741Z</updated>
+    <updated>2019-01-16T08:12:58.523Z</updated>
     
-    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;上一篇已经介绍了synchronized与ReentrantLock这两种加锁模式，接下来介绍一下读写锁ReentrantReadWriteLock。</p><p>&ensp;&ensp;&ensp;&ensp;设想以下情景：我们在系统中有一个多线程访问的缓存，多个线程都可以对缓存进行读或写操作，但是读操作远远多于写操作，要求写操作要线程安全，且写操作执行完成要求对当前的所有读操作马上可见。<br>                        分析上面的需求：因为有多个线程可能会执行写操作，因此多个线程的写操作必须同步串行执行；而写操作执行完成要求对当前的所有读操作马上可见，这就意味着当有线程正在读的时候，要阻塞写操作，当正在执行写操作时，要阻塞读操作。一个简单的实现就是将数据直接加上互斥锁，同一时刻不管是读还是写线程，都只能有一个线程操作数据。但是这样的问题就是如果当前只有N个读线程，没有写线程，这N个读线程也要傻呵呵的排队读，尽管其实是可以安全并发提高效率的。因此理想的实现是：<br>                        当有写线程时，则写线程独占同步状态。当没有写线程时只有读线程时，则多个读线程可以共享同步状态。<br>                        读写锁就是为了实现这种效果而生。</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;上一篇已经介绍了synchronized与ReentrantLock这两种加锁模式，接下来介绍一下读写锁ReentrantReadWriteLock。</p><p>&ensp;&ensp;&ensp;&ensp;设想以下情景：我们在系统中有一个多线程访问的缓存，多个线程都可以对缓存进行读或写操作，但是读操作远远多于写操作，要求写操作要线程安全，且写操作执行完成要求对当前的所有读操作马上可见。<br>                        分析上面的需求：因为有多个线程可能会执行写操作，因此多个线程的写操作必须同步串行执行；而写操作执行完成要求对当前的所有读操作马上可见，这就意味着当有线程正在读的时候，要阻塞写操作，当正在执行写操作时，要阻塞读操作。一个简单的实现就是将数据直接加上互斥锁，同一时刻不管是读还是写线程，都只能有一个线程操作数据。但是这样的问题就是如果当前只有N个读线程，没有写线程，这N个读线程也要傻呵呵的排队读，尽管其实是可以安全并发提高效率的。因此理想的实现是：<br>                        (1) 当有写线程时，则写线程独占同步状态。<br>                        (2) 当没有写线程时只有读线程时，则多个读线程可以共享同步状态。<br>                        读写锁就是为了实现这种效果而生。</p><hr>]]></content>
     
     <summary type="html">
     
