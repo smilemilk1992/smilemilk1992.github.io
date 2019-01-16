@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/01/11/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-1/</loc>
+    <lastmod>2019-01-16T08:41:41.689Z</lastmod>
+    <data>
+        <display>
+        <title>Java多线程编程-synchronized与ReentrantLock</title>
+        <pubTime>2019-01-11T08:52:36.000Z</pubTime>
+        
+        <tag>多线程</tag>
+         
+        <tag>Synchronized</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/01/16/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-ReentrantReadWriteLock/</loc>
     <lastmod>2019-01-16T08:33:27.270Z</lastmod>
     <data>
@@ -36,28 +58,6 @@
         <tag>文本去重</tag>
          
         <tag>simhash</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/01/11/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-1/</loc>
-    <lastmod>2019-01-11T03:34:26.831Z</lastmod>
-    <data>
-        <display>
-        <title>Java多线程编程-synchronized与ReentrantLock</title>
-        <pubTime>2019-01-11T08:52:36.000Z</pubTime>
-        
-        <tag>多线程</tag>
-         
-        <tag>Synchronized</tag>
          
          
            
