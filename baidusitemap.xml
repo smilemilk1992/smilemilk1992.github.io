@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/01/06/simhash/</loc>
+    <lastmod>2019-01-16T03:58:40.134Z</lastmod>
+    <data>
+        <display>
+        <title>【深度好文】simhash文本去重流程</title>
+        <pubTime>2019-01-06T12:37:41.000Z</pubTime>
+        
+        <tag>文本去重</tag>
+         
+        <tag>simhash</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/01/11/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-1/</loc>
     <lastmod>2019-01-11T03:34:26.831Z</lastmod>
     <data>
@@ -74,28 +96,6 @@
         <pubTime>2019-01-10T06:09:51.000Z</pubTime>
         
         <tag>bug修复</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/01/06/simhash/</loc>
-    <lastmod>2019-01-10T05:52:50.672Z</lastmod>
-    <data>
-        <display>
-        <title>【深度好文】simhash文本去重流程</title>
-        <pubTime>2019-01-06T12:37:41.000Z</pubTime>
-        
-        <tag>文本去重</tag>
-         
-        <tag>simhash</tag>
          
          
            
