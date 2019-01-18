@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-16T10:35:06.174Z</updated>
+  <updated>2019-01-18T03:45:05.808Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>回首2018，展望2019</title>
+    <link href="http://yoursite.com/2019/01/18/%E5%9B%9E%E9%A6%962018%EF%BC%8C%E5%B1%95%E6%9C%9B2019/"/>
+    <id>http://yoursite.com/2019/01/18/回首2018，展望2019/</id>
+    <published>2019-01-18T03:44:02.000Z</published>
+    <updated>2019-01-18T03:45:05.808Z</updated>
+    
+    <content type="html"><![CDATA[<p>更新中。。。。。。。。</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;更新中。。。。。。。。&lt;/p&gt;
+&lt;hr&gt;
+
+      
+    
+    </summary>
+    
+      <category term="about me" scheme="http://yoursite.com/categories/about-me/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>一张图学会Vim编辑器快捷键</title>
