@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-14T14:47:35.968Z</updated>
+  <updated>2019-02-14T14:49:04.223Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/02/14/Ubuntu-server%E4%B8%8B%E6%90%AD%E5%BB%BAMaven%E7%A7%81%E6%9C%8DNexus/"/>
     <id>http://yoursite.com/2019/02/14/Ubuntu-server下搭建Maven私服Nexus/</id>
     <published>2019-02-14T14:22:19.000Z</published>
-    <updated>2019-02-14T14:47:35.968Z</updated>
+    <updated>2019-02-14T14:49:04.223Z</updated>
     
-    <content type="html"><![CDATA[<p>Ubuntu系统上，用nexus搭建maven私服</p><p><strong> 1.下载Nexus </strong></p><blockquote><p>wget -c <a href="http://download.sonatype.com/nexus/oss/nexus-2.10.0-02-bundle.tar.gz" target="_blank" rel="noopener">http://download.sonatype.com/nexus/oss/nexus-2.10.0-02-bundle.tar.gz</a></p></blockquote><p><strong> 2.启动Nexus </strong></p><blockquote><p>tar -zxvf nexus-2.10.0-02-bundle.tar.gz</p></blockquote><blockquote><p>cd /home/ubuntu/nexus/nexus-2.10.0-02/bin</p></blockquote><blockquote><p>./nexus start</p></blockquote><blockquote><p>启动成功，访问地址：<a href="http://ip:8081/nexus" target="_blank" rel="noopener">http://ip:8081/nexus</a></p></blockquote><p><strong> 3.配置nexus </strong></p><p>&ensp;&ensp;&ensp;&ensp;登录nexus，右上角Log In，默认登录用户名密码：admin/admin123</p><p><img src="/img/20190214/login.png" alt="知乎1"></p><p>关于仓库的类型介绍　　</p><p>hosted 类型的仓库，内部项目的发布仓库</p><p>releases 内部的模块中release模块的发布仓库</p><p>snapshots 发布内部的SNAPSHOT模块的仓库</p><p>3rd party 第三方依赖的仓库，这个数据通常是由内部人员自行下载之后发布上去</p><p>proxy 类型的仓库，从远程中央仓库中寻找数据的仓库</p><p>group 类型的仓库，组仓库用来方便我们开发人员进行设置的仓库</p><p><img src="/img/20190214/2.png" alt="知乎1"></p><p>&ensp;&ensp;&ensp;&ensp;分别将Apache Snapshots、Central、Codehaus Sanpshots下Download Remote Indexes选项选择【true】，保存即可，默认是false，如下图</p><p><img src="/img/20190214/3.png" alt="知乎1"></p>]]></content>
+    <content type="html"><![CDATA[<p>Ubuntu系统上，用nexus搭建maven私服</p><p><strong> 1.下载Nexus </strong></p><blockquote><p>wget -c <a href="http://download.sonatype.com/nexus/oss/nexus-2.10.0-02-bundle.tar.gz" target="_blank" rel="noopener">http://download.sonatype.com/nexus/oss/nexus-2.10.0-02-bundle.tar.gz</a></p></blockquote><p><strong> 2.启动Nexus </strong></p><blockquote><p>tar -zxvf nexus-2.10.0-02-bundle.tar.gz</p></blockquote><blockquote><p>cd /home/ubuntu/nexus/nexus-2.10.0-02/bin</p></blockquote><blockquote><p>./nexus start</p></blockquote><blockquote><p>启动成功，访问地址：<a href="http://ip:8081/nexus" target="_blank" rel="noopener">http://ip:8081/nexus</a></p></blockquote><p><strong> 3.配置nexus </strong></p><p>&ensp;&ensp;&ensp;&ensp;登录nexus，右上角Log In，默认登录用户名密码：admin/admin123</p><p><img src="/img/20190214/login.png" alt="知乎1"></p><p>关于仓库的类型介绍　　</p><p>hosted 类型的仓库，内部项目的发布仓库</p><p>releases 内部的模块中release模块的发布仓库</p><p>snapshots 发布内部的SNAPSHOT模块的仓库</p><p>3rd party 第三方依赖的仓库，这个数据通常是由内部人员自行下载之后发布上去</p><p>proxy 类型的仓库，从远程中央仓库中寻找数据的仓库</p><p>group 类型的仓库，组仓库用来方便我们开发人员进行设置的仓库</p><p><img src="/img/20190214/2.png" alt="知乎1"></p><p>&ensp;&ensp;&ensp;&ensp;分别将Apache Snapshots、Central、Codehaus Sanpshots下Download Remote Indexes选项选择【true】，保存即可，默认是false，如下图</p><p><img src="/img/20190214/3.png" alt="知乎1"></p><p>&ensp;&ensp;&ensp;&ensp;然后分别将Apache Snapshots、Central、Codehaus Sanpshots更新Index，在每一个库上面右键操作Repair Index</p><p><img src="/img/20190214/4.png" alt="知乎1"></p>]]></content>
     
     <summary type="html">
     
