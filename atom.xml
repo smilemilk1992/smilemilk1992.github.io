@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-16T05:13:33.730Z</updated>
+  <updated>2019-02-20T06:24:58.909Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>java日志-log4j的使用</title>
+    <link href="http://yoursite.com/2019/02/20/java%E6%97%A5%E5%BF%97-log4j%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/02/20/java日志-log4j的使用/</id>
+    <published>2019-02-20T06:24:35.000Z</published>
+    <updated>2019-02-20T06:24:58.909Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="log4j" scheme="http://yoursite.com/tags/log4j/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java日志-logback的使用</title>
+    <link href="http://yoursite.com/2019/02/20/java%E6%97%A5%E5%BF%97-logback%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2019/02/20/java日志-logback的使用/</id>
+    <published>2019-02-20T06:23:44.000Z</published>
+    <updated>2019-02-20T11:53:46.307Z</updated>
+    
+    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;本文旨在如何快速在maven项目中配置logback日志框架，使日志即输出在控制台，又以log文件的形式输出到本地磁盘保存。</p><p>**</p><h1 id="1、logback的介绍"><a href="#1、logback的介绍" class="headerlink" title="1、logback的介绍"></a>1、logback的介绍</h1><p>Logback是由log4j创始人设计的另一个开源日志组件,官方网站： <a href="http://logback.qos.ch。它当前分为下面下个模块：" target="_blank" rel="noopener">http://logback.qos.ch。它当前分为下面下个模块：</a></p><blockquote><p>logback-core：其它两个模块的基础模块</p></blockquote><blockquote><p>logback-classic：它是log4j的一个改良版本，同时它完整实现了slf4j API使你可以很方便地更换成其它日志系统如log4j或JDK14 Logging</p></blockquote><blockquote><p>logback-access：访问模块与Servlet容器集成提供通过Http来访问日志的功能</p></blockquote><h1 id="2、logback优点"><a href="#2、logback优点" class="headerlink" title="2、logback优点"></a>2、logback优点</h1><p>logback日志框架的优点：</p><p>（1）内核重写，测试充分，初始化内存加载更小；</p><p>（2）logback非常自然地直接实现了slf4j；</p><p>（3）有比较齐全地200多页地文档；</p><p>（4）配置修改后，支持自定重新加载配置文件；</p><p>（5）支持自动去除旧的日志文件。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;本文旨在如何快速在maven项目中配置logback日志框架，使日志即输出在控制台，又以log文件的形式输出到本地磁盘保存。&lt;/p&gt;
+&lt;p&gt;**&lt;/p&gt;
+&lt;h1 id=&quot;1、logback的介绍&quot;&gt;&lt;a href=&quot;#1、lo
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="logback" scheme="http://yoursite.com/tags/logback/"/>
+    
+  </entry>
   
   <entry>
     <title>回首2018，展望2019</title>
