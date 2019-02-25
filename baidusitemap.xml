@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/02/20/java%E6%97%A5%E5%BF%97-logback%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-02-20T12:24:36.976Z</lastmod>
+    <loc>http://yoursite.com/2019/02/25/java%E6%97%A5%E5%BF%97-log4j%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-02-25T07:01:52.819Z</lastmod>
     <data>
         <display>
-        <title>java日志-logback的入门使用</title>
-        <pubTime>2019-02-20T06:23:44.000Z</pubTime>
+        <title>java日志-log4j的使用</title>
+        <pubTime>2019-02-25T06:24:35.000Z</pubTime>
         
-        <tag>logback</tag>
+        <tag>log4j</tag>
          
          
            
@@ -24,14 +24,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/02/20/java%E6%97%A5%E5%BF%97-log4j%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-02-20T06:24:58.909Z</lastmod>
+    <loc>http://yoursite.com/2019/02/20/java%E6%97%A5%E5%BF%97-logback%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-02-20T12:24:36.976Z</lastmod>
     <data>
         <display>
-        <title>java日志-log4j的使用</title>
-        <pubTime>2019-02-20T06:24:35.000Z</pubTime>
+        <title>java日志-logback的入门使用</title>
+        <pubTime>2019-02-20T06:23:44.000Z</pubTime>
         
-        <tag>log4j</tag>
+        <tag>logback</tag>
          
          
            
