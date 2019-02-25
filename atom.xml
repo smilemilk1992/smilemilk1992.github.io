@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-25T07:01:52.819Z</updated>
+  <updated>2019-02-25T07:13:57.543Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="http://yoursite.com/2019/02/25/java%E6%97%A5%E5%BF%97-log4j%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2019/02/25/java日志-log4j的使用/</id>
     <published>2019-02-25T06:24:35.000Z</published>
-    <updated>2019-02-25T07:01:52.819Z</updated>
+    <updated>2019-02-25T07:13:57.543Z</updated>
+    
+    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp;日志是应用软件中不可缺少的部分，Apache的开源项目log4j是一个功能强大的日志组件,提供方便的日志记录。在apache网站：jakarta.apache.org/log4j 可以免费下载到Log4j最新版本的软件包</p><p>&ensp;&ensp;&ensp;&ensp;log4j是Apache的一个开源代码项目, 通过使用log4j; 我们可以控制日志信息输送的目的地是控制台/文件/GUI组件/甚至是套接口服务器/NT的时间记录器/UNIX Syslog 守护进程等, 我们也可以控制每一条日志的输出格式; 通过定义每一条日志信息的级别, 我们能够更加细致的控制日志的生成过程, 最令人感兴趣的就是, 这些可以通过一个配置文件来灵活进行配置, 而不是需要修改应用的代码</p><p>&ensp;&ensp;&ensp;&ensp;在应用程序中添加日志记录总的来说基于三个目的: ①见识代码中变量的变化, 周期性的记录到文件中供其他应用进行统计分析工作; ②跟踪代码运行时轨迹, 作为日后审计的依据; ③担当集成开发环境中的调试器的作用, 向文件或控制台打印代码的调试信息</p><hr>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;日志是应用软件中不可缺少的部分，Apache的开源项目log4j是一个功能强大的日志组件,提供方便的日志记录。在apache网站：jakarta.apache.org/log4j 可以免费下载到Log4j最新版本的软件包&lt;/p
+      
     
     </summary>
     
