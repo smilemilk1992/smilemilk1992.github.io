@@ -40,11 +40,11 @@
 <td>acquire(int permits) 从RateLimiter获取指定许可数，该方法会被阻塞直到获取到请求</td>
 </tr>
 <tr>
-<td>static RateLimiter</td>
+<td>static</td>
 <td>create(double permitsPerSecond) 根据指定的稳定吞吐率创建RateLimiter，这里的吞吐率是指每秒多少许可数（通常是指QPS，每秒多少查询）</td>
 </tr>
 <tr>
-<td>static RateLimiter</td>
+<td>static</td>
 <td>create(double permitsPerSecond, long warmupPeriod, TimeUnit unit) 根据指定的稳定吞吐率和预热期来创建RateLimiter，这里的吞吐率是指每秒多少许可数（通常是指QPS，每秒多少个请求量），在这段预热时间内，RateLimiter每秒分配的许可数会平稳地增长直到预热期结束时达到其最大速率。（只要存在足够请求数来使其饱和）</td>
 </tr>
 <tr>
