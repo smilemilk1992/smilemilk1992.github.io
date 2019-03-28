@@ -4,26 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/02/16/thksFor2018/</loc>
-    <lastmod>2019-03-28T06:48:16.563Z</lastmod>
-    <data>
-        <display>
-        <title>回首2018，展望2019</title>
-        <pubTime>2019-02-16T00:08:08.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="about me" url="http://yoursite.com/categories/about-me/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2019/03/28/java%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E4%B9%8Bredis%E7%B2%BE%E7%AE%80%E7%AF%87/</loc>
-    <lastmod>2019-03-28T06:44:42.314Z</lastmod>
+    <lastmod>2019-03-28T06:57:11.231Z</lastmod>
     <data>
         <display>
         <title>java分布式锁之redis精简篇</title>
@@ -37,6 +19,24 @@
            
              
               <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/02/16/thksFor2018/</loc>
+    <lastmod>2019-03-28T06:48:16.563Z</lastmod>
+    <data>
+        <display>
+        <title>回首2018，展望2019</title>
+        <pubTime>2019-02-16T00:08:08.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="about me" url="http://yoursite.com/categories/about-me/"/>
           
         </display>
     </data>
