@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-28T08:35:52.980Z</updated>
+  <updated>2019-06-17T14:13:54.228Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>netty实战-http请求</title>
+    <link href="http://yoursite.com/2019/06/17/netty%E5%AE%9E%E6%88%98-http%E8%AF%B7%E6%B1%82/"/>
+    <id>http://yoursite.com/2019/06/17/netty实战-http请求/</id>
+    <published>2019-06-17T14:12:40.000Z</published>
+    <updated>2019-06-17T14:13:54.228Z</updated>
+    
+    <content type="html"><![CDATA[<p>netty学习中。。。本周六晚更新</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;netty学习中。。。本周六晚更新&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://yoursite.com/categories/java/"/>
+    
+    
+      <category term="netty" scheme="http://yoursite.com/tags/netty/"/>
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring集成Kafka</title>

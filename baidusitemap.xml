@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/06/17/netty%E5%AE%9E%E6%88%98-http%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2019-06-17T14:13:54.228Z</lastmod>
+    <data>
+        <display>
+        <title>netty实战-http请求</title>
+        <pubTime>2019-06-17T14:12:40.000Z</pubTime>
+        
+        <tag>netty</tag>
+         
+        <tag>http</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://yoursite.com/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/04/28/Spring%E9%9B%86%E6%88%90Kafka/</loc>
     <lastmod>2019-04-28T08:35:52.980Z</lastmod>
     <data>
