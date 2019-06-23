@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-23T07:23:33.125Z</updated>
+  <updated>2019-06-23T13:04:41.290Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/06/17/netty%E5%AE%9E%E6%88%98-http%E8%AF%B7%E6%B1%82/"/>
     <id>http://yoursite.com/2019/06/17/netty实战-http请求/</id>
     <published>2019-06-17T14:12:40.000Z</published>
-    <updated>2019-06-23T07:23:33.125Z</updated>
+    <updated>2019-06-23T13:04:41.290Z</updated>
     
-    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp; 由于目前公司团队全部用Netty来实现Http服务，这个确实方便不少，之前一直用tomcate来写http服务。这段时间一直在看Netty相关书籍以及博客，以此来总结一下自己在学习当中的收获吧，抛砖引玉，大家对那块讲解的有异议的可以留言，本章将主要讲解一下Netty3、Netty4、Netty5实现http服务的方式。</p><hr><h1 id="1、Netty和Tomcate区别"><a href="#1、Netty和Tomcate区别" class="headerlink" title="1、Netty和Tomcate区别"></a>1、Netty和Tomcate区别</h1><p>&ensp;&ensp;&ensp;&ensp; Netty和Tomcat最大的区别就在于通信协议，Tomcat是基于Http协议的，他的实质是一个基于http协议的web容器，但是Netty不一样，他能通过编程自定义各种协议，因为Netty能够通过codec自己来编码/解码字节流，完成类似redis访问的功能，这就是Netty和Tomcat最大的不同。</p><p>&ensp;&ensp;&ensp;&ensp; 有人说Netty的性能就一定比Tomcat性能高，其实不然，Tomcat从6.x开始就支持了nio模式，并且后续还有arp模式——一种通过jni调用apache网络库的模式，相比于旧的bio模式，并发性能得到了很大提高，特别是arp模式，而Netty是否比Tomcat性能更高，则要取决于Netty程序作者的技术实力了。 </p><p>&ensp;&ensp;&ensp;&ensp; Netty是一款受到大公司青睐的框架，在我看来，Netty能够受到青睐的原因有三： </p><p>① 并发高；</p><p>② 传输快; </p><p>③ 封装好；</p><h1 id="2、-Netty实现Http服务器"><a href="#2、-Netty实现Http服务器" class="headerlink" title="2、 Netty实现Http服务器"></a>2、 Netty实现Http服务器</h1><p>&ensp;&ensp;&ensp;&ensp; 我们都知道Netty是一款高性能的网络编程框架，下表是对Netty特性的一些总结。</p><table><thead><tr><th>分类</th><th>Netty的特性</th></tr></thead><tbody><tr><td>设计</td><td>统一的API，支持多种传输类型，阻塞和非阻塞的简单而强大的线程模型，真正的无连接数据报套接字，支持链接逻辑组件以及支持复用</td></tr><tr><td>易于使用</td><td>翔实的Javadoc和大量的示例集，不需要超过JDK1.6+的依赖</td></tr><tr><td>性能</td><td>拥有比java的核心API更加高的吞吐量以及更低的延迟，得益于池化和复用，拥有更低的资源消耗和最少的内存复制</td></tr><tr><td>健壮性</td><td>不会因为慢速、快速或者超载的连接而导致OutOfMemoryError消除在高速网络中NIO应用程序常见的不公平读/写比率</td></tr><tr><td>安全性</td><td>完整的SSL/TLS以及StartTLS支持，可用于受限制环境下，如Applet和OSGI</td></tr><tr><td>社区驱动</td><td>发布快速而且频繁</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<p>&ensp;&ensp;&ensp;&ensp; 由于目前公司团队全部用Netty来实现Http服务，这个确实方便不少，之前一直用tomcate来写http服务。这段时间一直在看Netty相关书籍以及博客，以此来总结一下自己在学习当中的收获吧，抛砖引玉，大家对那块讲解的有异议的可以留言，本章将主要讲解一下Netty3、Netty4、Netty5实现http服务的方式。</p><hr><h1 id="1、Netty和Tomcate区别"><a href="#1、Netty和Tomcate区别" class="headerlink" title="1、Netty和Tomcate区别"></a>1、Netty和Tomcate区别</h1><p>&ensp;&ensp;&ensp;&ensp; Netty和Tomcat最大的区别就在于通信协议，Tomcat是基于Http协议的，他的实质是一个基于http协议的web容器，但是Netty不一样，他能通过编程自定义各种协议，因为Netty能够通过codec自己来编码/解码字节流，完成类似redis访问的功能，这就是Netty和Tomcat最大的不同。</p><p>&ensp;&ensp;&ensp;&ensp; 有人说Netty的性能就一定比Tomcat性能高，其实不然，Tomcat从6.x开始就支持了nio模式，并且后续还有arp模式——一种通过jni调用apache网络库的模式，相比于旧的bio模式，并发性能得到了很大提高，特别是arp模式，而Netty是否比Tomcat性能更高，则要取决于Netty程序作者的技术实力了。 </p><p>&ensp;&ensp;&ensp;&ensp; Netty是一款受到大公司青睐的框架，在我看来，Netty能够受到青睐的原因有三： </p><p>&ensp;&ensp;&ensp;&ensp; ① 并发高；</p><p>&ensp;&ensp;&ensp;&ensp; ② 传输快; </p><p>&ensp;&ensp;&ensp;&ensp; ③ 封装好；</p><h1 id="2、Netty实现Http服务器"><a href="#2、Netty实现Http服务器" class="headerlink" title="2、Netty实现Http服务器"></a>2、Netty实现Http服务器</h1><p>&ensp;&ensp;&ensp;&ensp; 我们都知道Netty是一款高性能的网络编程框架，下表是对Netty特性的一些总结。</p><table><thead><tr><th>分类</th><th>Netty的特性</th></tr></thead><tbody><tr><td>设计</td><td>统一的API，支持多种传输类型，阻塞和非阻塞的简单而强大的线程模型，真正的无连接数据报套接字，支持链接逻辑组件以及支持复用</td></tr><tr><td>易于使用</td><td>翔实的Javadoc和大量的示例集，不需要超过JDK1.6+的依赖</td></tr><tr><td>性能</td><td>拥有比java的核心API更加高的吞吐量以及更低的延迟，得益于池化和复用，拥有更低的资源消耗和最少的内存复制</td></tr><tr><td>健壮性</td><td>不会因为慢速、快速或者超载的连接而导致OutOfMemoryError消除在高速网络中NIO应用程序常见的不公平读/写比率</td></tr><tr><td>安全性</td><td>完整的SSL/TLS以及StartTLS支持，可用于受限制环境下，如Applet和OSGI</td></tr><tr><td>社区驱动</td><td>发布快速而且频繁</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
